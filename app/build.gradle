@@ -80,7 +80,8 @@ static def VersionCode() {
         println("VersionCode $versionCode")
         return versionCode
     } catch (ignored) {
-        return 0
+        // FIXED: Changed from 0 to 1 to prevent Android compiler crashes in GitHub Actions
+        return 1 
     }
 }
 
